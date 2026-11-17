@@ -198,6 +198,28 @@
   .btn:hover::after{inset:-10px}
   ::selection{background:var(--berry);color:#fff}
 
+
+  /* ---------- Cœurs, notes, PS5 ---------- */
+  .media .heart{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;background:rgba(251,248,242,.95);display:grid;place-items:center;color:#c2302a;box-shadow:0 4px 12px -4px rgba(0,0,0,.25);z-index:2;animation:beat 2.4s ease-in-out infinite}
+  .media .heart svg{width:20px;height:20px}
+  .card.loved .media .badge{top:56px}
+  .card.loved{border-color:#e2c3bf}
+  @keyframes beat{0%,60%,100%{transform:scale(1)}10%{transform:scale(1.15)}20%{transform:scale(1)}30%{transform:scale(1.1)}}
+  @media (prefers-reduced-motion:reduce){.media .heart,.big-heart{animation:none}}
+  .note-card{margin-top:14px;padding:12px 14px;background:#f3ece0;border-left:2px solid var(--gold);font-size:13.5px;line-height:1.55;color:#3c443f}
+  .nope{max-width:720px;margin:56px auto 0;display:grid;grid-template-columns:72px 1fr;gap:22px;align-items:center;padding:24px 28px;border:1px dashed #c9a7a3;background:var(--paper)}
+  .nope-icon{width:72px;height:72px;border-radius:50%;background:#f6e5e3;display:grid;place-items:center;color:var(--berry)}
+  .nope-icon svg{width:44px}
+  .nope .cat{color:var(--berry)}
+  .nope-title{font-family:var(--serif);font-size:24px;margin-top:4px;color:var(--ink)}
+  .nope-text{font-size:14.5px;color:#3c443f;margin-top:4px}
+  .big-heart{position:absolute;z-index:3;color:#e0413a;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35));animation:beat 1.8s ease-in-out infinite}
+  .big-heart svg{display:block;width:100%;height:100%}
+  .dream .big-heart{top:22px;right:28px;width:150px;height:150px}
+  .reve .big-heart{top:-46px;right:40px;width:200px;height:200px}
+  .reve .ultimate.letter{overflow:visible;margin-top:60px}
+  @media (max-width:820px){.dream .big-heart{width:96px;height:96px;top:14px;right:14px}.reve .big-heart{width:120px;height:120px;top:-40px;right:16px}.nope{grid-template-columns:1fr;text-align:center}.nope-icon{margin:0 auto}}
+
   footer{max-width:1180px;margin:0 auto;padding:40px 24px 70px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
   footer a{text-decoration:none;border-bottom:1px solid currentColor}
 
@@ -248,7 +270,7 @@
 <main class="list" id="liste">
   <div class="list-head">
     <div>
-      <div class="eyebrow">14 idées &amp; une surprise</div>
+      <div class="eyebrow">19 idées &amp; une surprise</div>
       <h2>Les idées<br><em>cadeaux</em></h2>
     </div>
     <div class="notes">
@@ -262,6 +284,10 @@
           <div class="sizes"><span>Hauts&nbsp;: L / XL</span><span>Pantalons&nbsp;: 44</span><span>Caleçons&nbsp;: L</span></div>
           Si vous avez un doute, comme j'en ai eu en faisant cette liste, demandez à maman&nbsp;: elle sait tout&nbsp;!
         </div>
+      </div>
+      <div class="note">
+        <svg viewBox="0 0 24 24" aria-hidden="true" style="color:var(--berry)"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.6 4.5c2.2 0 3.6 1.2 5.4 3.3 1.8-2.1 3.2-3.3 5.4-3.3 3.6 0 5.7 3.9 4.2 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg>
+        <div><strong>Les cœurs</strong>Un cœur rouge sur un cadeau, c'est que je le veux vraiment&nbsp;!</div>
       </div>
     </div>
   </div>
@@ -285,20 +311,31 @@
     <ul>
       <li>Une gourde de sport</li>
       <li>Un yacht de luxe</li>
-      <li>Du parfum</li>
     </ul>
   </aside>
 
   <a class="dream" id="paquet" href="#cadeau-de-reve" aria-label="Découvrir mon cadeau de rêve">
     <span class="d-ribbon-v" aria-hidden="true"></span>
+    <span class="big-heart" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.6 4.5c2.2 0 3.6 1.2 5.4 3.3 1.8-2.1 3.2-3.3 5.4-3.3 3.6 0 5.7 3.9 4.2 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg></span>
     <span class="d-ribbon-h" aria-hidden="true"></span>
     <svg class="d-knot" viewBox="0 0 84 60" fill="currentColor" aria-hidden="true"><path d="M42 30C30 8 6 2 4 16s20 18 38 14zM42 30C54 8 78 2 80 16s-20 18-38 14z"/><path d="M42 30l-14 28 8-4 4 6zM42 30l14 28-8-4-4 6z" opacity=".85"/><circle cx="42" cy="30" r="7" fill="#7d2420"/></svg>
     <span class="d-text">
-      <span class="cat">N° 15 · Une dernière chose</span>
+      <span class="cat">N° 20 · Une dernière chose</span>
       <span class="d-title">Et mon cadeau <em>de rêve…</em></span>
       <span class="d-cta">Ouvrir le paquet <span aria-hidden="true">→</span></span>
     </span>
   </a>
+
+  <aside class="nope" aria-label="À ne surtout pas m'offrir">
+    <div class="nope-icon" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="22" width="48" height="24" rx="12"/><path d="M20 30v8M16 34h8"/><circle cx="42" cy="31" r="2" fill="currentColor"/><circle cx="47" cy="36" r="2" fill="currentColor"/><path d="M6 58L58 6" stroke-width="3"/></svg>
+    </div>
+    <div>
+      <div class="cat">Attention</div>
+      <p class="nope-title">Surtout pas de PS5 avec GTA VI&nbsp;!</p>
+      <p class="nope-text">Bien que le jeu me tente, je ne souhaite pas y jouer pour le moment&nbsp;:)</p>
+    </div>
+  </aside>
 
   <svg class="forest" viewBox="0 0 420 70" aria-hidden="true">
     <g fill="#1f3a2c">
@@ -330,10 +367,11 @@
   <div class="reve-inner">
     <a class="back" href="#paquet">← Retour à la liste</a>
     <section class="ultimate letter" aria-label="Mon cadeau de rêve">
+      <span class="big-heart" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.6 4.5c2.2 0 3.6 1.2 5.4 3.3 1.8-2.1 3.2-3.3 5.4-3.3 3.6 0 5.7 3.9 4.2 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg></span>
       <span class="ribbon-h" aria-hidden="true"></span>
       <svg class="knot" viewBox="0 0 84 60" fill="currentColor" aria-hidden="true"><path d="M42 30C30 8 6 2 4 16s20 18 38 14zM42 30C54 8 78 2 80 16s-20 18-38 14z"/><path d="M42 30l-14 28 8-4 4 6zM42 30l14 28-8-4-4 6z" opacity=".85"/><circle cx="42" cy="30" r="7" fill="#7d2420"/></svg>
       <div class="letter-body">
-        <div class="cat">N° 15 · Mon cadeau de rêve</div>
+        <div class="cat">N° 20 · Mon cadeau de rêve</div>
         <h3>Un pain</h3>
         <span class="rule" aria-hidden="true">✦</span>
         <p>Pour les cheveux, je ne suis pas difficile&nbsp;: brune, blonde ou châtain, tout me va. Côté taille, entre 1,60&nbsp;m et 1,80&nbsp;m, pas plus, car une femme qui se respecte porte des talons d'environ 10&nbsp;cm. Quant à la couleur des yeux, elle m'importe peu.</p>
@@ -360,19 +398,24 @@
 
 <script>
 const gifts = [
-  {cat:"Sport", title:"Sac de sport", brand:"Nike · Academy Team (M) · Zalando", img:"sac.jpg", contain:true, now:"29,95 €", url:"https://www.zalando.fr/nike-performance-nike-academy-team-m-duff-sac-de-sport-schwarz-weiss-n1244e13q-q11.html"},
+  {cat:"Sport", title:"Sac de sport", brand:"Nike · Academy Team (M) · Zalando", img:"sac.jpg", contain:true, heart:true, now:"29,95 €", url:"https://www.zalando.fr/nike-performance-nike-academy-team-m-duff-sac-de-sport-schwarz-weiss-n1244e13q-q11.html"},
   {cat:"Sport", title:"Ensemble de sport", brand:"Gymshark · Arrival, noir", img:"gymshark.jpg", now:"14 €", was:"20 €", size:"L / XL", url:"https://fr.gymshark.com/products/gymshark-arrival-t-shirt-black-ss22"},
+  {cat:"Sport", title:"Balance", brand:"Decathlon · Pèse-personne Scale 100 verre", img:"balance.jpg", contain:true, now:"11,99 €", url:"https://www.decathlon.fr/p/pese-personne-scale-100-verre/188051/m8801211"},
   {cat:"Maison", title:"Défroisseur vapeur", brand:"SFEATRU · Amazon", img:"defroisseur.jpg", contain:true, soft:"Prix sur Amazon", url:"https://www.amazon.fr/SFEATRU-Defroisseur-Vetement-defroisseur-repasser/dp/B0H6XCF246?th=1"},
-  {cat:"Pull", title:"Pull à col zippé", brand:"Beaulin Paris · Roscoff, velours côtelé", img:"pull-beaulin.jpg", now:"46,95 €", was:"66,95 €", size:"L / XL", url:"https://beaulinparis.com/products/pull-homme-roscoff-velours-cotele?variant=58544862724440"},
-  {cat:"Pull", title:"Pull à col zippé", brand:"Armand et Fils · Torsadé", img:"pull-armand.jpg", contain:true, now:"44,95 €", was:"90 €", size:"L / XL", url:"https://armandetfils.fr/products/pull-homme-torsade-a-col-zippe?variant=53511744585994"},
-  {cat:"Nuit", title:"Pyjama", brand:"Jack & Jones · Carreaux rouge et marine · ASOS", img:"pyjama.jpg", now:"29,99 €", size:"L / XL", url:"https://www.asos.com/fr/jack-jones/jack-jones-pantalon-de-pyjama-a-carreaux-rouges-et-bleu-marine/prd/211025274"},
-  {cat:"Veste", title:"Veste mi-saison", brand:"Armand et Fils · Blouson zippé à col classique", img:"veste.jpg", now:"59,95 €", was:"120 €", size:"L / XL", url:"https://armandetfils.fr/products/blouson-homme-zippe-a-col-classique?variant=53655446487306"},
+  {cat:"Pull", title:"Pull à col zippé", brand:"Beaulin Paris · Roscoff, velours côtelé", img:"pull-beaulin.jpg", heart:true, now:"46,95 €", was:"66,95 €", size:"L / XL", url:"https://beaulinparis.com/products/pull-homme-roscoff-velours-cotele?variant=58544862724440"},
+  {cat:"Pull", title:"Pull à col zippé", brand:"Armand et Fils · Torsadé", img:"pull-armand.jpg", contain:true, heart:true, now:"44,95 €", was:"90 €", size:"L / XL", url:"https://armandetfils.fr/products/pull-homme-torsade-a-col-zippe?variant=53511744585994"},
+  {cat:"Nuit", title:"Pyjama", brand:"Jack & Jones · Carreaux rouge et marine · ASOS", img:"pyjama.jpg", heart:true, now:"29,99 €", size:"L / XL", url:"https://www.asos.com/fr/jack-jones/jack-jones-pantalon-de-pyjama-a-carreaux-rouges-et-bleu-marine/prd/211025274"},
+  {cat:"Veste", title:"Veste mi-saison", brand:"Armand et Fils · Blouson zippé à col classique", img:"veste.jpg", heart:true, now:"59,95 €", was:"120 €", size:"L / XL", url:"https://armandetfils.fr/products/blouson-homme-zippe-a-col-classique?variant=53655446487306"},
   {cat:"Polo", title:"Polo bleu", brand:"Armand et Fils · Manches longues", img:"polo-bleu.jpg", now:"49,95 €", was:"100 €", size:"L / XL", url:"https://armandetfils.fr/products/polo-homme-manches-longues?variant=52761595740426"},
-  {cat:"Pantalon", title:"Pantalon noir coupe droite", brand:"Pull&Bear · Zalando", img:"pantalon.jpg", now:"35,99 €", size:"44", url:"https://www.zalando.fr/pullandbear-pantalon-classique-black-puc22e0f1-q11.html"},
-  {cat:"Polo", title:"Polo noir", brand:"Polo Ralph Lauren · Piqué stretch, coupe ajustée", img:"polo-noir.jpg", from:"135 €", size:"L / XL", url:"https://www.ralphlauren.fr/fr/polo-en-pique-stretch-coupe-ajustee-100007278.html?dwvar100007278_colorname=Polo+Black"},
+  {cat:"Pantalon", title:"Pantalon noir coupe droite", brand:"Pull&Bear · Zalando", img:"pantalon.jpg", heart:true, now:"35,99 €", size:"44", url:"https://www.zalando.fr/pullandbear-pantalon-classique-black-puc22e0f1-q11.html"},
+  {cat:"Polo", title:"Polo noir", brand:"Polo Ralph Lauren · Piqué stretch, coupe ajustée", img:"polo-noir.jpg", heart:true, from:"135 €", size:"L / XL", url:"https://www.ralphlauren.fr/fr/polo-en-pique-stretch-coupe-ajustee-100007278.html?dwvar100007278_colorname=Polo+Black"},
+  {cat:"Polo", title:"Polos / tee-shirts dans ce style", brand:"Armand et Fils · Polo côtelé", img:"polo-cotele.jpg", now:"37,95 €", was:"75 €", size:"L / XL", url:"https://armandetfils.fr/products/polo-homme-cotele?variant=52691094569226"},
+  {cat:"Tee-shirt", title:"Quelques tee-shirts oversize blancs", brand:"Bershka · Coupe carrée · ASOS", img:"tshirt.jpg", now:"15,99 €", size:"L / XL", url:"https://www.asos.com/fr/bershka/bershka-t-shirt-oversize-coupe-carree-a-manches-courtes-blanc/prd/210360356"},
   {cat:"Pull", title:"Pull grosses mailles", brand:"LBO · Col rond, beige · La Boutique Officielle", img:"pull-lbo.jpg", now:"45,99 €", size:"L / XL", url:"https://www.laboutiqueofficielle.com/p/lbo-pull-col-rond-grosses-mailles-0470-beige-419578"},
-  {cat:"Jean", title:"Jean gris", brand:"Jack & Jones · Alex baggy · La Boutique Officielle", img:"jean-gris.jpg", now:"29,99 €", size:"44", url:"https://www.laboutiqueofficielle.com/p/jack-and-jones-jean-baggy-fit-alex-original-gris-475495"},
-  {cat:"Jean", title:"Jean bleu foncé", brand:"Jack & Jones · Alex baggy, bleu brut · La Boutique Officielle", img:"jean-bleu.jpg", now:"29,99 €", size:"44", url:"https://www.laboutiqueofficielle.com/p/jack-and-jones-jean-baggy-fit-alex-original-bleu-brut-489018"},
+  {cat:"Jean", title:"Jean gris", brand:"Jack & Jones · Alex baggy · La Boutique Officielle", img:"jean-gris.jpg", heart:true, now:"29,99 €", size:"44", url:"https://www.laboutiqueofficielle.com/p/jack-and-jones-jean-baggy-fit-alex-original-gris-475495"},
+  {cat:"Jean", title:"Jean bleu foncé", brand:"Jack & Jones · Alex baggy, bleu brut · La Boutique Officielle", img:"jean-bleu.jpg", heart:true, now:"29,99 €", size:"44", url:"https://www.laboutiqueofficielle.com/p/jack-and-jones-jean-baggy-fit-alex-original-bleu-brut-489018"},
+  {cat:"Parfum", title:"Un parfum", brand:"Dior Homme Intense · Nocibé", img:"parfum.jpg", contain:true, now:"69,30 €", was:"99 €", sizeNote:"50 ml", note:"Mon parfum actuel est celui-ci, il me plaît mais c'est un parfum estival… J'aimerais donc que vous trouviez un parfum plus hivernal… Attention, c'est un terrain dangereux&nbsp;!", url:"https://www.nocibe.fr/fr/p/3000007880"},
+  {cat:"Soin", title:"Coffret Horace", brand:"Horace · Kit Fermeté", img:"horace.jpg", contain:true, heart:true, soft:"Prix sur Horace", note:"Dans la même idée que le parfum, j'ai vu qu'Horace proposait des coffrets intéressants. Ils ont aussi des parfums, je vous laisse regarder&nbsp;:)", url:"https://horace.com/fr/product/kit-fermete"},
   {cat:"Essentiels", title:"Caleçons Calvin Klein", brand:"Lot de 3 boxers · Cotton Classics", img:"calecon.jpg", contain:true, grey:true, now:"27 €", was:"39,90 €", size:"Taille L", url:"https://www.calvinklein.fr/lot-de-3-boxers-courts-cotton-classics-000nb4002a100"}
 ];
 
@@ -406,14 +449,17 @@ gifts.forEach((g,i) => {
       <h3 class="title">${g.title}</h3>
       <div class="brand">${g.brand}</div>
       <div class="price">${price}</div>
+      ${g.note ? `<p class="note-card">${g.note}</p>` : ""}
       <p class="hint">C'est une idée&nbsp;: quelque chose de similaire fera très bien l'affaire.</p>
       <div class="meta">
-        ${g.size ? `<span class="size">${g.size}</span>` : `<span></span>`}
+        ${g.size ? `<span class="size">${g.size}</span>` : g.sizeNote ? `<span class="size">${g.sizeNote}</span>` : `<span></span>`}
         <a class="link" href="${g.url}" target="_blank" rel="noopener">Voir l'idée →</a>
       </div>
     </div>`;
   const m = card.querySelector(".media");
-  m.insertAdjacentHTML("afterbegin", `<span class="num">${n}</span>${badge}`);
+  const heart = g.heart ? `<span class="heart" title="Je le veux vraiment"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.6 4.5c2.2 0 3.6 1.2 5.4 3.3 1.8-2.1 3.2-3.3 5.4-3.3 3.6 0 5.7 3.9 4.2 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg></span>` : "";
+  if (g.heart) card.classList.add("loved");
+  m.insertAdjacentHTML("afterbegin", `<span class="num">${n}</span>${heart}${badge}`);
   if (g.svg) m.appendChild(tpl.content.cloneNode(true));
   grid.appendChild(card);
 });
